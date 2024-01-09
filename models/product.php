@@ -19,6 +19,6 @@ class Product {
             'price' => $this->price,
             'category' => $this->category,
             'image' => $this->image,
-        ];
+        ]; 
     }
 }
