@@ -1,7 +1,10 @@
 <?php
 require_once __DIR__ . "/Category.php";
+require_once __DIR__ . "/../Traits/Pricetable.php";
 
 class Product {
+    use Pricetable;
+
     private $name;
     private $price;
     private $image;
