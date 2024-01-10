@@ -8,8 +8,12 @@ $dog = new Category ("fa-solid fa-dog", "cani");
 
 $cat = new Category ("fa-solid fa-cat", "gatti");
 
-$catalog = [
-    new FoodProduct ("ultima", 10, $dog, "fa-solid fa-dog", "croccantini"),
-    new gadget ("fido", 20, $dog, "fa-solid fa-dog", "peluches"),
-    new FoodProduct ("monge", 7, $cat, "fa-solid fa-cat", "patè"),
-];
+try {
+    $catalog = [
+        new FoodProduct("ultima", 0, $dog, "fa-solid fa-dog", "croccantini"),
+        new gadget("fido", 20, $dog, "fa-solid fa-dog", "peluches"),
+        new FoodProduct("monge", 7, $cat, "fa-solid fa-cat", "patè")
+    ];
+} catch (Exception $e) {
+    echo "Errore: " . $e->getMessage();
+}

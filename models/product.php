@@ -13,7 +13,7 @@ class Product {
     public function __construct($_name, $_price, Category $_category, $_image) 
     {
         $this->name = $_name;
-        $this->price = $_price;
+        $this->setPrice($_price);
         $this->image = $_image;
         $this->category = $_category;
     }
@@ -26,10 +26,6 @@ class Product {
         $this->image = $_image;
     }
 
-    public function setPrice($_price) {
-        $this->price = $_price;
-    }
-
     public function setCategory($_category) {
         $this->category = $_category;
     }
@@ -40,10 +36,6 @@ class Product {
 
     public function getImage() {
         return $this->image;
-    }
-
-    public function getPrice() {
-        return $this->price;
     }
 
     public function getCategory() {

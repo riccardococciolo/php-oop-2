@@ -7,11 +7,11 @@ trait Pricetable {
         if($_price > 0) {
             $this->price = $_price;
         } else {
-            return 'Error: il prezzo deve essere un numero positivo';
+            throw new Exception("Il prezzo deve essere positivo");
         }
     }
 
     public function getPrice() {
-        return $this->price . 'kg';
+        return $this->price . '$';
     }
 }
